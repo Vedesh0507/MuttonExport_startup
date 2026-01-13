@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Freshflow Foods Markets - Domestic and international export market presence with cold chain logistics and quality certifications.">
+    <meta name="theme-color" content="#2E7D32">
     <title>Our Markets | Freshflow Foods</title>
     
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <!-- Preload Critical Assets for LCP -->
+    <link rel="preload" as="image" href="images/hero/market_hero.webp" type="image/webp">
+    <link rel="preload" as="image" href="images/brand/logo.webp" type="image/webp">
     
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Critical CSS -->
+    <style>
+    :root{--color-primary:#2E7D32;--color-white:#FFFFFF;--color-dark:#212121;--color-gray-800:#424242;--fs-base:clamp(0.9rem,0.85rem + 0.25vw,1rem);--spacing-lg:1.5rem;--header-height:80px;--touch-target:44px;--z-fixed:300}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Segoe UI',Tahoma,sans-serif;line-height:1.6;color:var(--color-gray-800);background:var(--color-white)}.header{position:fixed;top:0;left:0;width:100%;z-index:var(--z-fixed);background-color:transparent;transition:background-color .3s ease}.header.scrolled{background-color:var(--color-white);box-shadow:0 4px 6px rgba(0,0,0,0.1)}.navbar{height:var(--header-height)}.nav-container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:1200px;margin:0 auto;padding:0 var(--spacing-lg)}.nav-logo{display:flex;align-items:center;gap:0.5rem}.logo-img{height:50px;width:50px;border-radius:50%}.logo-text{font-size:clamp(1.25rem,1.1rem + 0.75vw,1.5rem);font-weight:700;color:var(--color-white)}.header.scrolled .logo-text{color:var(--color-primary)}.nav-menu{display:flex;align-items:center;gap:2rem}.nav-link{font-weight:500;color:var(--color-white);padding:0.5rem 4px;min-height:var(--touch-target);display:flex;align-items:center;text-decoration:none;transition:color .2s ease}.header.scrolled .nav-link{color:var(--color-dark)}.page-hero{position:relative;min-height:280px;height:35vh;max-height:400px;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;contain:layout style paint}.page-hero.market-hero{background-image:url('images/hero/market_hero.webp')!important}.page-hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.4)}.page-hero .container{position:relative;z-index:1;text-align:center}.page-hero-title{color:#fff;font-size:clamp(2rem,1.5rem+2.5vw,3rem);margin-bottom:.5rem}.breadcrumb{color:rgba(255,255,255,0.9)}.breadcrumb a{color:#fff;text-decoration:none}.breadcrumb-separator{margin:0 .5rem}img{content-visibility:auto}
+    </style>
+    
+    <!-- Non-Critical CSS -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 </head>
 <body>
     <!-- ============================================
@@ -60,14 +68,14 @@
     <!-- ============================================
          PAGE HERO BANNER
     ============================================= -->
-    <section class="page-hero">
+    <section class="page-hero market-hero" role="banner" aria-label="Markets Hero">
         <div class="page-hero-overlay"></div>
         <div class="container">
             <h1 class="page-hero-title">Our Markets</h1>
-            <nav class="breadcrumb">
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
                 <a href="index.html">Home</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Markets</span>
+                <span class="breadcrumb-separator" aria-hidden="true">/</span>
+                <span class="breadcrumb-current" aria-current="page">Markets</span>
             </nav>
         </div>
     </section>
@@ -374,10 +382,7 @@
         </div>
     </footer>
 
-    <!-- Swiper JS -->
-    <script src="libs/swiper/swiper-bundle.min.js"></script>
-    
     <!-- Main JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.optimized.js" defer></script>
 </body>
 </html>

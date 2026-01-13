@@ -3,14 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium Goat Products from Freshflow Foods - Export-ready goat meat processed under strict hygienic conditions.">
-    <title>Goat Products | Freshflow Foods</title>
+    <meta name="description" content="Premium Goat Products from Freshflow Foods - Export-ready goat meat processed under strict hygienic conditions. Black Bengal, Barbari, Tellicherry breeds.">
+    <meta name="theme-color" content="#2E7D32">
+    <meta name="robots" content="index, follow">
+    <title>Goat Products | Freshflow Foods - Premium Export Quality Goat Meat</title>
     
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://muttonexport.netlify.app/goat-products">
     
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Premium Goat Products | Freshflow Foods">
+    <meta property="og:description" content="Export-ready goat meat processed under strict hygienic conditions.">
+    <meta property="og:image" content="images/products/goat-meat.webp">
+    
+    <!-- CRITICAL: Preload LCP Image (Hero Background) -->
+    <link rel="preload" as="image" href="images/products/goat.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/brand/logo.webp" type="image/webp">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Premium Goat Meat Products",
+        "description": "Export-ready premium goat meat from Freshflow Foods, processed under strict hygienic conditions",
+        "brand": {
+            "@type": "Brand",
+            "name": "Freshflow Foods"
+        },
+        "category": "Meat Products",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "Freshflow Foods"
+            }
+        }
+    }
+    </script>
+    
+    <!-- Critical CSS inlined for faster FCP -->
+    <style>
+    :root{--color-primary:#2E7D32;--color-white:#FFFFFF;--color-dark:#212121;--color-gray-800:#424242;--fs-base:clamp(0.9rem,0.85rem + 0.25vw,1rem);--spacing-lg:1.5rem;--header-height:80px;--touch-target:44px;--z-fixed:300}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Segoe UI',Tahoma,sans-serif;line-height:1.6;color:var(--color-gray-800);background:var(--color-white)}.header{position:fixed;top:0;left:0;width:100%;z-index:var(--z-fixed);background-color:transparent;transition:background-color .3s ease}.header.scrolled{background-color:var(--color-white);box-shadow:0 4px 6px rgba(0,0,0,0.1)}.navbar{height:var(--header-height)}.nav-container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:1200px;margin:0 auto;padding:0 var(--spacing-lg)}.nav-logo{display:flex;align-items:center;gap:0.5rem}.logo-img{height:50px;width:50px;border-radius:50%}.logo-text{font-size:clamp(1.25rem,1.1rem + 0.75vw,1.5rem);font-weight:700;color:var(--color-white)}.header.scrolled .logo-text{color:var(--color-primary)}.nav-menu{display:flex;align-items:center;gap:2rem}.nav-link{font-weight:500;color:var(--color-white);padding:0.5rem 4px;min-height:var(--touch-target);display:flex;align-items:center;text-decoration:none;transition:color .2s ease}.header.scrolled .nav-link{color:var(--color-dark)}.page-hero{position:relative;min-height:280px;height:35vh;max-height:400px;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;contain:layout style paint}.page-hero.goat-hero{background-image:url('images/products/goat.webp')!important;background-position:center 20%}.page-hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.4)}.page-hero .container{position:relative;z-index:1;text-align:center}.page-hero-title{color:#fff;font-size:clamp(2rem,1.5rem+2.5vw,3rem);margin-bottom:.5rem}.breadcrumb{color:rgba(255,255,255,0.9)}.breadcrumb a{color:#fff;text-decoration:none}.breadcrumb-separator{margin:0 .5rem}img{content-visibility:auto}
+    </style>
+    
+    <!-- Non-Critical CSS -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    
+    <!-- Swiper CSS - Not needed on internal pages without slider -->
 </head>
 <body>
     <!-- ============================================
@@ -20,8 +63,11 @@
         <nav class="navbar">
             <div class="nav-container">
                 <!-- Logo -->
-                <a href="index.html" class="nav-logo">
-                    <img src="images/brand/logo.png" alt="Freshflow Foods Logo" class="logo-img">
+                <a href="index.html" class="nav-logo" aria-label="Freshflow Foods - Go to homepage">
+                    <picture>
+                        <source srcset="images/brand/logo.webp" type="image/webp">
+                        <img src="images/brand/logo.png" alt="Freshflow Foods Logo" class="logo-img" width="50" height="50" fetchpriority="high">
+                    </picture>
                     <span class="logo-text">Freshflow Foods</span>
                 </a>
                 
@@ -60,16 +106,16 @@
     <!-- ============================================
          PAGE HERO BANNER
     ============================================= -->
-    <section class="page-hero" style="background-image: url('images/products/goat.jpg'); background-position: center 20%; background-size: cover;">
+    <section class="page-hero goat-hero" role="banner" aria-label="Goat Products Hero">
         <div class="page-hero-overlay"></div>
         <div class="container">
-            <h1 class="page-hero-title">Our Products</h1>
-            <nav class="breadcrumb">
+            <h1 class="page-hero-title">Premium Goat Products</h1>
+            <nav class="breadcrumb" aria-label="Breadcrumb navigation">
                 <a href="index.html">Home</a>
-                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-separator" aria-hidden="true">/</span>
                 <a href="index.html#products">Products</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Goat Products</span>
+                <span class="breadcrumb-separator" aria-hidden="true">/</span>
+                <span class="breadcrumb-current" aria-current="page">Goat Products</span>
             </nav>
         </div>
     </section>
@@ -86,8 +132,25 @@
             
             <div class="product-detail">
                 <div class="product-detail-image">
-                    <img src="images/products/goat-meat.jpg" alt="Premium Goat Meat Products" loading="lazy">
-                    <img src="images/products/profile2.jpg" alt="Fresh Goat Meat Cuts" class="product-detail-image-secondary" loading="lazy">
+                    <picture>
+                        <source srcset="images/products/goat-meat.webp" type="image/webp">
+                        <img src="images/products/goat-meat.jpg" 
+                             alt="Premium export-ready goat meat cuts from Freshflow Foods" 
+                             width="600" 
+                             height="400" 
+                             fetchpriority="high"
+                             decoding="async">
+                    </picture>
+                    <picture>
+                        <source srcset="images/products/profile2.webp" type="image/webp">
+                        <img src="images/products/profile2.jpg" 
+                             alt="Fresh hygienic goat meat processing at Freshflow Foods facility" 
+                             class="product-detail-image-secondary" 
+                             loading="lazy" 
+                             decoding="async"
+                             width="600" 
+                             height="400">
+                    </picture>
                 </div>
                 <div class="product-detail-content">
                     <h3 class="product-detail-title">Premium Goat Meat</h3>
@@ -222,7 +285,15 @@
                 <!-- Sheep Product Card -->
                 <div class="product-card" data-animate="fade-up">
                     <div class="product-image">
-                        <img src="images/products/sheep.jpg" alt="Premium Sheep Meat" loading="lazy">
+                        <picture>
+                            <source srcset="images/products/sheep.webp" type="image/webp">
+                            <img src="images/products/sheep.jpg" 
+                                 alt="Premium export-quality sheep meat from sustainable farms" 
+                                 loading="lazy" 
+                                 decoding="async"
+                                 width="400" 
+                                 height="300">
+                        </picture>
                         <div class="product-overlay">
                             <a href="sheep-products.html" class="btn btn-primary">Learn More</a>
                         </div>
@@ -230,14 +301,22 @@
                     <div class="product-info">
                         <h3 class="product-title">Sheep Products</h3>
                         <p class="product-description">High-grade sheep meat sourced from sustainable farms, processed with care for international markets.</p>
-                        <a href="sheep-products.html" class="product-link">Learn More →</a>
+                        <a href="sheep-products.html" class="product-link">Learn More about Sheep Products →</a>
                     </div>
                 </div>
                 
                 <!-- Lamb Product Card -->
                 <div class="product-card" data-animate="fade-up">
                     <div class="product-image">
-                        <img src="images/products/lamb.jpg" alt="Premium Lamb Meat" loading="lazy">
+                        <picture>
+                            <source srcset="images/products/lamb.webp" type="image/webp">
+                            <img src="images/products/lamb.jpg" 
+                                 alt="Tender premium lamb meat for export markets" 
+                                 loading="lazy" 
+                                 decoding="async"
+                                 width="400" 
+                                 height="300">
+                        </picture>
                         <div class="product-overlay">
                             <a href="lamb-products.html" class="btn btn-primary">Learn More</a>
                         </div>
@@ -245,7 +324,7 @@
                     <div class="product-info">
                         <h3 class="product-title">Lamb Products</h3>
                         <p class="product-description">Tender lamb meat from young animals, carefully selected and processed to meet export quality standards.</p>
-                        <a href="lamb-products.html" class="product-link">Learn More →</a>
+                        <a href="lamb-products.html" class="product-link">Learn More about Lamb Products →</a>
                     </div>
                 </div>
             </div>
@@ -273,8 +352,11 @@
             <div class="footer-grid">
                 <!-- Brand Column -->
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <img src="images/brand/logo.png" alt="Freshflow Foods">
+                    <a href="index.html" class="footer-logo" aria-label="Freshflow Foods - Go to homepage">
+                        <picture>
+                            <source srcset="images/brand/logo.webp" type="image/webp">
+                            <img src="images/brand/logo.png" alt="Freshflow Foods" loading="lazy" decoding="async" width="50" height="50">
+                        </picture>
                         <span>Freshflow Foods</span>
                     </a>
                     <p class="footer-tagline">Premium Quality Mutton Exports</p>
@@ -320,10 +402,7 @@
         </div>
     </footer>
 
-    <!-- Swiper JS -->
-    <script src="libs/swiper/swiper-bundle.min.js"></script>
-    
-    <!-- Main JavaScript -->
-    <script src="js/main.js"></script>
+    <!-- Main JavaScript - Optimized, Swiper not needed on internal pages -->
+    <script src="js/main.optimized.js" defer></script>
 </body>
 </html>

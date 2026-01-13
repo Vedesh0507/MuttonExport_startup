@@ -6,11 +6,14 @@
     <meta name="description" content="Premium Lamb Products from Freshflow Foods - Export-ready lamb meat processed under strict hygienic conditions.">
     <title>Lamb Products | Freshflow Foods</title>
     
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <!-- Critical CSS -->
+    <style>
+    :root{--color-primary:#2E7D32;--color-white:#FFFFFF;--color-dark:#212121;--color-gray-800:#424242;--fs-base:clamp(0.9rem,0.85rem + 0.25vw,1rem);--spacing-lg:1.5rem;--header-height:80px;--touch-target:44px;--z-fixed:300}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Tahoma,sans-serif;line-height:1.6;color:var(--color-gray-800);background:var(--color-white)}.header{position:fixed;top:0;left:0;width:100%;z-index:var(--z-fixed);background-color:transparent}.header.scrolled{background-color:var(--color-white);box-shadow:0 4px 6px rgba(0,0,0,0.1)}.navbar{height:var(--header-height)}.nav-container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:1200px;margin:0 auto;padding:0 var(--spacing-lg)}.nav-logo{display:flex;align-items:center;gap:0.5rem}.logo-img{height:50px;border-radius:50%}.logo-text{font-size:clamp(1.25rem,1.1rem + 0.75vw,1.5rem);font-weight:700;color:var(--color-white)}.header.scrolled .logo-text{color:var(--color-primary)}.nav-menu{display:flex;align-items:center;gap:2rem}.nav-link{font-weight:500;color:var(--color-white);padding:0.5rem 4px;min-height:var(--touch-target);display:flex;align-items:center}.header.scrolled .nav-link{color:var(--color-dark)}.page-hero{position:relative;min-height:280px;height:35vh;max-height:400px;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
+    </style>
     
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Non-Critical CSS -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 </head>
 <body>
     <!-- ============================================
@@ -234,10 +237,7 @@
         </div>
     </footer>
 
-    <!-- Swiper JS -->
-    <script src="libs/swiper/swiper-bundle.min.js"></script>
-    
     <!-- Main JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.optimized.js" defer></script>
 </body>
 </html>

@@ -649,6 +649,33 @@ address {
     background-repeat: no-repeat;
 }
 
+/* Hero slide image (for LCP optimization) */
+.hero-slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Picture element inside hero slide */
+.hero-slide picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -1108,6 +1135,13 @@ address {
     position: relative;
     height: 250px;
     overflow: hidden;
+}
+
+/* Support for picture element inside product cards */
+.product-image picture {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .product-image img {
